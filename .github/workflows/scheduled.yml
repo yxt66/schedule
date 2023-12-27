@@ -1,17 +1,24 @@
-name: Scheduled Workflow
+name: Run Node.js Every 5 Seconds
+
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '*/5 * * * *'  # 每5秒触发一次，即每分钟触发12次
 
 jobs:
-  build:
+  run-nodejs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run a script
-      run: |
-        echo "This job was triggered by a schedule."
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Node.js script
+      run: node test.js  # 替换为你的 Node.js 脚本名称
