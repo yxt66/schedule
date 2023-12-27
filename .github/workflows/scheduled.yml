@@ -1,8 +1,9 @@
 name: Run Node.js Every 5 Seconds
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'  # 每5秒触发一次，即每分钟触发12次
+  push:
+    branches:
+      - main
 
 jobs:
   run-nodejs:
