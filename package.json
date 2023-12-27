@@ -1,0 +1,23 @@
+{
+  "name": "schedule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yxt66/schedule.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yxt66/schedule/issues"
+  },
+  "homepage": "https://github.com/yxt66/schedule#readme",
+  "dependencies": {
+    "node-cron": "^3.0.3"
+  }
+}
